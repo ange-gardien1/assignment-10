@@ -1,0 +1,44 @@
+<!-- user-account.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      User Account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="user">
+    <ion-card-header>
+      User Details
+    </ion-card-header>
+    <ion-card-content>
+      <p>UserID: {{ user.UserId }}</p>
+      <p>First Name: {{ user.FirstName }}</p>
+      <p>Last Name: {{ user.LastName }}</p>
+      <p>Email: {{ user.Email }}</p>
+      <p>Phone Number: {{ user.PhoneNumber }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="position">
+    <ion-card-header>
+      Current Location
+    </ion-card-header>
+    <ion-card-content>
+      <p>Latitude: {{ position.coords.latitude }}</p>
+      <p>Longitude: {{ position.coords.longitude }}</p>
+      <p>Altitude: {{ position.coords.altitude }}</p>
+      <!-- You can display other relevant position details here -->
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="getGPS()">Get GPS Location</ion-button>
+  <div id="map" class="custom-map" style="height: 300px;"></div>
+</ion-content>
+
+
+
+  
+
+

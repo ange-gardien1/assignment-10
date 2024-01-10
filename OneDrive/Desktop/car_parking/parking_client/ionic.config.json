@@ -1,0 +1,7 @@
+{
+  "name": "parking_client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
